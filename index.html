@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Spinner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="rbPointsContainer">
+        <p>RB Points: <span id="rbPoints">100000000000</span></p>
+    </div>
+
+    <div id="spinSection">
+        <button id="spinButton">Spin</button>
+        <div id="characterResult"></div>
+        <button id="shopButton">Shop</button>
+        <button id="historyButton">History</button>
+        <button id="helpButton">Help</button>
+    </div>
+
+    <div id="shopSection" style="display:none;">
+        <h2>Shop</h2>
+        <button onclick="buyCharacter('TUNDRA', 90000000000)">Buy TUNDRA - 90B RB</button>
+        <button onclick="buyCharacter('PYURA', 20000000)">Buy Pyura - 20M RB</button>
+        <button onclick="buyCharacter('LIAM', 1000000)">Buy Liam - 1M RB</button>
+        <button id="goBackShopButton">Go Back</button>
+        <div id="purchaseResult"></div>
+    </div>
+
+    <div id="historySection" style="display:none;">
+        <h2>History</h2>
+        <div id="historyList"></div>
+        <button id="goBackHistoryButton">Go Back</button>
+    </div>
+
+    <div id="helpSection" style="display:none;">
+        <h2>Help</h2>
+        <p>Instructions and help content go here.</p>
+        <button id="goBackHelpButton">Go Back</button>
+    </div>
+
+    <div id="redeemSection">
+        <input type="text" id="redeemCodeInput" placeholder="Enter code">
+        <button id="redeemButton">Redeem Code</button>
+        <div id="redeemResult"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<div id="shopSection" style="display:none;">
+    <h2>Shop</h2>
+    <div id="shopContainer">
+        <!-- Example Shop Items -->
+        <button onclick="buyCharacter('TUNDRA', 90000000000)">Buy TUNDRA - 90B RB</button>
+        <button onclick="buyCharacter('Pyura', 20000000)">Buy Pyura - 20M RB</button>
+        <button onclick="buyCharacter('Liam', 1000000)">Buy Liam - 1M RB</button>
+    </div>
+    <div id="purchaseResult"></div>
+    <button id="goBackButton" onclick="showSection('spinSection')">Go Back</button>
+</div>
+<script src="script.js"></script>
+
+<div id="shopSection" style="display:none;">
+    <h2>Shop</h2>
+    <div id="shopContainer">
+        <!-- Example Shop Items -->
+        <button onclick="buyCharacter('TUNDRA', 90000000000)">Buy TUNDRA - 90B RB</button>
+        <button onclick="buyCharacter('Pyura', 20000000)">Buy Pyura - 20M RB</button>
+        <button onclick="buyCharacter('Liam', 1000000)">Buy Liam - 1M RB</button>
+    </div>
+    <div id="purchaseResult"></div>
+    <button id="goBackButton" onclick="showSection('spinSection')">Go Back</button>
+</div>
+<script src="script.js"></script>
+
+<div id="earningsContainer">
+    <p>You earn 10 RB points with every spin!</p>
+    <p><strong>Points Earned This Spin:</strong> <span id="pointsEarned">0</span></p>
+</div>
+

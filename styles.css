@@ -1,0 +1,162 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #141E30, #243B55);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* RB Points Display */
+#rbPointsContainer {
+    margin-bottom: 20px;
+}
+
+#rbPoints {
+    font-size: 24px;
+    background-color: #2c3e50;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #34495e;
+}
+
+/* Buttons */
+#buttonContainer button,
+#goBackButton {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Character Result Display */
+#characterResult p {
+    font-size: 22px;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #2c3e50;
+    box-shadow: 0px 0px 10px #34495e;
+}
+
+/* Text Color Classes */
+.grey-text {
+    color: grey;
+}
+
+.orange-text {
+    color: orange;
+}
+
+.dark-text {
+    color: #1c1c1c;
+}
+
+/* Glowing and Rainbow Effects */
+.glow {
+    animation: glowAnimation 1s infinite alternate;
+}
+
+@keyframes glowAnimation {
+    0% { text-shadow: 0 0 10px #ffb6c1, 0 0 20px #ff69b4, 0 0 30px #ff1493; }
+    100% { text-shadow: 0 0 20px #ff69b4, 0 0 30px #ff1493, 0 0 40px #ff0000; }
+}
+
+.rainbow-text {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: rainbowAnimation 2s infinite alternate;
+    font-weight: bold;
+}
+
+@keyframes rainbowAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* History Section */
+#historyContainer {
+    padding: 20px;
+    background-color: #34495e;
+    border-radius: 10px;
+    margin-top: 30px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0px 0px 20px #2c3e50;
+    text-align: left;
+}
+
+#historyContainer h2 {
+    margin-top: 0;
+}
+
+#history p {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #2c3e50;
+    box-shadow: 0px 0px 5px #34495e;
+}
+
+/* Purchase and Redeem Results */
+#purchaseResult, #redeemResult {
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 10px;
+    background-color: #2c3e50;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #34495e;
+}
+
+/* Redeem Code Input */
+#redeemCodeInput {
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    width: 50%;
+    max-width: 300px;
+    font-size: 16px;
+}
+
+#redeemButton {
+    margin-top: 10px;
+    padding: 12px 25px;
+    font-size: 16px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    #redeemCodeInput {
+        width: 80%;
+    }
+
+    #historyContainer {
+        width: 90%;
+    }
+}
+
